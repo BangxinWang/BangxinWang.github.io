@@ -34,11 +34,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 220px;
+            width: 280px;
         }
         .profile-photo {
-            width: 200px;
-            height: 200px;
+            width: 260px;
+            height: 260px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #eee;
@@ -58,9 +58,18 @@
         }
         a { color: #0056b3; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .nav-links { margin-top: 1.5rem; font-size: 1.1rem; }
-        .nav-links a { margin-right: 1.5rem; font-weight: bold; }
-        .publication, .talk, .conference { margin-bottom: 1rem; }
+        .nav-links { 
+            margin-top: 1.5rem; 
+            font-size: 1.05rem; 
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 1rem 1.5rem;
+            justify-content: start;
+        }
+        .nav-links a { 
+            font-weight: bold; 
+        }
+        .publication, .talk, .stay, .conference { margin-bottom: 1rem; }
         .item-title { font-weight: bold; }
         ul { padding-left: 1.5rem; }
         li { margin-bottom: 0.5rem; }
@@ -79,6 +88,7 @@
                 <a href="#publications">Publications</a>
                 <a href="#wip">Work in Progress</a>
                 <a href="#talks">Talks</a>
+                <a href="#stays">Research Stays</a>
                 <a href="#conferences">Conferences</a>
             </nav>
         </div>
@@ -167,6 +177,48 @@
             <li class="talk">
                 <span class="item-title">Weighted-median model of opinion formation on signed social networks</span> <span class="date-loc">01/2024</span><br>
                 group seminar at Princeton University
+            </li>
+        </ul>
+    </section>
+
+    <section id="stays">
+        <h2>Research Stays</h2>
+        <ul>
+            <li class="stay">
+                <span class="item-title">University of Leeds</span> <span class="date-loc">Leeds, UK — 08/2026</span><br>
+                Host: João Faria Martins
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Edinburgh</span> <span class="date-loc">Edinburgh, UK — 07-08/2026</span><br>
+                Host: David Jordan
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Nottingham</span> <span class="date-loc">Nottingham, UK — 07/2026</span><br>
+                Host: Robert Laugwitz
+            </li>
+            <li class="stay">
+                <span class="item-title">BIMSA</span> <span class="date-loc">Beijing, CN — 06/2026</span><br>
+                Host: Yilong Wang
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Southern Denmark</span> <span class="date-loc">Odense, DK — 02/2026</span><br>
+                Host: Apoorv Tiwari
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Lille</span> <span class="date-loc">Lille, FR — 10/2025</span><br>
+                Host: Alexis Virelizier
+            </li>
+            <li class="stay">
+                <span class="item-title">Paris Cité University</span> <span class="date-loc">Paris, FR — 03/2025</span><br>
+                Host: Azat Gainutdinov
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Lille</span> <span class="date-loc">Lille, FR — 04/2024</span><br>
+                Host: Alexis Virelizier
+            </li>
+            <li class="stay">
+                <span class="item-title">University of Montpellier</span> <span class="date-loc">Montpellier, FR — 04/2024</span><br>
+                Host: Marco De Renzi
             </li>
         </ul>
     </section>
