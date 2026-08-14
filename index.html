@@ -29,6 +29,9 @@
             margin: 0 0 0.5rem 0;
             color: #222;
         }
+        .name-zh {
+            white-space: nowrap;
+        }
         .profile-figure {
             margin: 0;
             display: flex;
@@ -74,13 +77,38 @@
         ul { padding-left: 1.5rem; }
         li { margin-bottom: 0.5rem; }
         .date-loc { float: right; color: #666; font-size: 0.95em; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .profile-figure {
+                margin-bottom: 1.5rem;
+            }
+            .nav-links {
+                justify-content: center;
+                gap: 0.8rem 1rem;
+            }
+            .date-loc {
+                float: none;
+                display: block;
+                margin-top: 0.2rem;
+                font-size: 0.9em;
+                color: #888;
+            }
+            body {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
     
     <header class="header-container">
         <div class="header-text">
-            <h1>Bangxin Wang (王邦鑫)</h1>
+            <h1>Bangxin Wang <span class="name-zh">(王邦鑫)</span></h1>
             <p>Email: <a href="mailto:bangxin.wang@uni-hamburg.de">bangxin.wang@uni-hamburg.de</a></p>
             
             <nav class="nav-links">
