@@ -24,6 +24,10 @@
             padding-bottom: 2rem;
             margin-bottom: 2rem;
         }
+        .header-text {
+            flex: 1; /* Allows text to take up remaining space */
+            padding-right: 2rem;
+        }
         .header-text h1 {
             margin: 0 0 0.5rem 0;
             color: #222;
@@ -31,12 +35,45 @@
         .name-zh {
             white-space: nowrap;
         }
+        
+        /* Updated Navigation Matrix Styles */
+        .nav-links { 
+            margin-top: 1.5rem; 
+            font-size: 0.95rem; 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates 3 exactly equal columns */
+            gap: 0.6rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        .nav-links a { 
+            font-weight: 600; 
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.2rem;
+            background-color: #f8f9fa; /* Subtle grid cell background */
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            color: #0056b3;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-links a:hover { 
+            background-color: #e2e8f0;
+            border-color: #cbd5e1;
+            color: #003d82;
+            text-decoration: none;
+        }
+
         .profile-figure {
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 280px;
+            flex-shrink: 0;
         }
         .profile-photo {
             width: 260px;
@@ -60,17 +97,6 @@
         }
         a { color: #0056b3; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .nav-links { 
-            margin-top: 1.5rem; 
-            font-size: 1.05rem; 
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            gap: 1rem 1.5rem;
-            justify-content: start;
-        }
-        .nav-links a { 
-            font-weight: bold; 
-        }
         .publication, .talk, .stay, .conference { margin-bottom: 1rem; }
         .item-title { font-weight: bold; }
         ul { padding-left: 1.5rem; }
@@ -83,12 +109,16 @@
                 flex-direction: column-reverse;
                 text-align: center;
             }
+            .header-text {
+                padding-right: 0;
+            }
             .profile-figure {
                 margin-bottom: 1.5rem;
             }
+            /* Switches to a 2-column matrix on smaller screens */
             .nav-links {
-                justify-content: center;
-                gap: 0.8rem 1rem;
+                grid-template-columns: repeat(2, 1fr); 
+                max-width: 100%;
             }
             .date-loc {
                 float: none;
