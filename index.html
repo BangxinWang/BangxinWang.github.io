@@ -35,6 +35,25 @@
         .name-zh {
             white-space: nowrap;
         }
+
+        #teaching li {
+    margin-bottom: 1rem;
+}
+#teaching .teaching-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.25rem 1rem;
+    align-items: baseline;
+}
+#teaching .teaching-heading .date-loc {
+    float: none;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    #teaching .teaching-heading {
+        grid-template-columns: 1fr;
+    }
+}
         
         /* Updated Navigation Matrix Styles */
         .nav-links { 
@@ -95,6 +114,18 @@
             padding-bottom: 0.3rem; 
             margin-top: 2.5rem; 
         }
+        section > details > summary {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+            margin-top: 2.5rem;
+            cursor: pointer;
+        }
+        section > details > summary h2 {
+            display: inline;
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
         a { color: #0056b3; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .publication, .talk, .stay, .conference { margin-bottom: 1rem; }
@@ -148,6 +179,7 @@
                 <a href="#talks">Talks</a>
                 <a href="#stays">Research Stays</a>
                 <a href="#conferences">Conferences</a>
+                <a href="#teaching">Teaching Experience</a>
             </nav>
         </div>
         
@@ -158,19 +190,24 @@
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Since October 2024, I have been a PhD student in mathematics at Universität Hamburg, supervised by Ingo Runkel and Azat Gainutdinov. My research is funded by the German Research Foundation (DFG) under the Collaborative Research Center SFB 1624, <a href="https://www.sfb1624.uni-hamburg.de/" target="_blank">Higher structures, moduli spaces and integrability</a>. Prior to my doctoral studies, I obtained my Bachelor's degree in electrical engineering and Master's degree in mathematics at ETH Zürich. Originally, I grew up in Wuhan, China.</p>
+        <details open>
+        <summary><h2>About Me</h2></summary>
+        <p>Since October 2024, I have been a PhD student in Mathematics at Universität Hamburg, supervised by Ingo Runkel and Azat Gainutdinov. My research is funded by the German Research Foundation (DFG) under the Collaborative Research Center SFB 1624, <a href="https://www.sfb1624.uni-hamburg.de/" target="_blank">Higher structures, moduli spaces and integrability</a>. Prior to my doctoral studies, I obtained my Bachelor's degree in Electrical Engineering and Master's degree in Mathematics at ETH Zürich. Originally, I grew up in Wuhan, China.</p>
         <p>My research lies at the intersection of topological field theories, higher category theory, and representation theory. I am particularly interested in defects, background fields, and gauging in (non-semisimple) TFTs, and their associated algebraic structures.</p>
+        </details>
     </section>
 
     <section id="ai">
-        <h2>AI Disclaimer</h2>
+        <details>
+        <summary><h2>AI Disclaimer</h2></summary>
         <p>I frequently use AI in my workflow for learning, searching literature, discussing ideas, and polishing drafts. However, no AI-generated text is contained in my published papers. While I strongly support thoughtful discussions on how AI can serve the long-term interests of the mathematical community, I am deeply concerned by the current marketing-driven practices of AI companies. The commercialisation of AI tools has led to behaviours that can be considered <a href="https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/" target="_blank">research misconduct</a>, and it frequently misrepresents the nature of mathematical research to the public.</p>
         <p>This commercial encroachment is increasingly infiltrating our community. Events like Caltech's 40-hour, multimillion-dollar-sponsored Mathathon incentivise a rushed, unverified, and superficial approach to mathematics. Promoting this irresponsible, storytelling-style methodology stands in direct opposition to the values and traditions that our community has long revered and upheld. To protect these core principles, I have signed the <a href="https://proofsandprompts.com/2026/09/10/open-letter-about-the-mathathon/" target="_blank">open letter</a> protesting this event.</p>
+        </details>
     </section>
 
     <section id="publications">
-        <h2>Publications & Preprints</h2>
+        <details open>
+        <summary><h2>Publications & Preprints</h2></summary>
         <ul>
              <li class="publication">
                 <span class="item-title">Crossed-Module Crossed Braided Categories</span><br>
@@ -188,10 +225,12 @@
                 [<a href="https://arxiv.org/abs/2402.05103" target="_blank">arXiv:2402.05103</a>] [<a href="https://pubs.ams.org/journals/tran/2026-379-02/S0002-9947-2025-09515-1" target="_blank">Journal</a>]
             </li>
         </ul>
+        </details>
     </section>
 
     <section id="wip">
-        <h2>Work in Progress</h2>
+        <details open>
+        <summary><h2>Work in Progress</h2></summary>
         <ul>
             <li class="publication">
                 <span class="item-title"> Non-Semisimple \(\chi\)-Crossed Quantum Groups </span><br>
@@ -206,14 +245,24 @@
                 with H. Xu. <em>In preparation</em>.
             </li>
         </ul>
+        </details>
     </section>
 
     <section id="talks">
-        <h2>Talks</h2>
+        <details>
+        <summary><h2>Talks</h2></summary>
         <ul>
             <li class="talk">
+                <span class="item-title">TBD</span> <span class="date-loc">03/2027</span><br>
+                Anomalies, topology, and QFTs at Tshinghua Sanya International Math Forum 
+            </li>
+            <li class="talk">
+                <span class="item-title">Non-semisimple 3d extended HQFTs</span> <span class="date-loc">11/2026</span><br>
+                Algebra seminar at University of Hamburg
+            </li>
+            <li class="talk">
                 <span class="item-title">Algebraic data for extended HQFTs</span> <span class="date-loc">07/2026</span><br>
-                quantum mathematics seminar at University of Nottingham
+                Quantum mathematics seminar at University of Nottingham
             </li>
             <li class="talk">
                 <span class="item-title">Ribbon categories crossed by crossed modules</span> <span class="date-loc">06/2026</span><br>
@@ -221,33 +270,35 @@
             </li>
             <li class="talk">
                 <span class="item-title">Non-semisimple HQFTs</span> <span class="date-loc">02/2026</span><br>
-                center for quantum mathematics seminar at University of Southern Denmark
+                Center for quantum mathematics seminar at University of Southern Denmark
             </li>
             <li class="talk">
                 <span class="item-title">\(\chi\)-Crossed ribbon categories</span> <span class="date-loc">10/2025</span><br>
-                topology seminar at University of Lille
+                Topology seminar at University of Lille
             </li>
             <li class="talk">
                 <span class="item-title">\(\chi\)-Crossed ribbon categories</span> <span class="date-loc">10/2025</span><br>
-                Algebraic, Topological and probabilistic approaches in CFT at Institut Pascal
+                Algebraic, topological and probabilistic approaches in CFT at Institut Pascal
             </li>
             <li class="talk">
                 <span class="item-title">Non-semisimple quantum invariants for 3-manifolds</span> <span class="date-loc">04/2025</span><br>
-                algebra and topology seminar at University of Wuppertal
+                Algebra and topology seminar at University of Wuppertal
             </li>
             <li class="talk">
                 <span class="item-title">Hennings TQFTs for cobordisms decorated with cohomology classes</span> <span class="date-loc">04/2024</span><br>
-                topology seminar at University of Lille
+                Topology seminar at University of Lille
             </li>
             <li class="talk">
                 <span class="item-title">Weighted-median model of opinion formation on signed social networks</span> <span class="date-loc">01/2024</span><br>
-                group seminar at Princeton University
+                Group seminar at Princeton University
             </li>
         </ul>
+        </details>
     </section>
 
     <section id="stays">
-        <h2>Research Stays</h2>
+        <details>
+        <summary><h2>Research Stays</h2></summary>
         <ul>
             <li class="stay">
                 <span class="item-title">University of Leeds</span> <span class="date-loc">Leeds, UK — 08/2026</span><br>
@@ -286,10 +337,12 @@
                 Host: Marco De Renzi
             </li>
         </ul>
+        </details>
     </section>
 
     <section id="conferences">
-        <h2>Conferences</h2>
+        <details>
+        <summary><h2>Conferences</h2></summary>
         <ul>
             <li class="conference"><span class="item-title">Algebra and Geometry meets Quantum Fields and Strings</span> <span class="date-loc">Hamburg, DE — 08/2026</span></li>
              <li class="conference"><span class="item-title">Global Categorical Symetries</span> <span class="date-loc">Paris, FR — 06/2026</span></li>
@@ -305,7 +358,72 @@
             <li class="conference"><span class="item-title">From Subfactors to Quantum Topology - In memory of Vaughan Jones</span> <span class="date-loc">Geneva, CH — 06/2022</span></li>
             <li class="conference"><span class="item-title">Recent Developments in Link Homology</span> <span class="date-loc">Les Diablerets, CH — 02/2022</span></li>
         </ul>
+        </details>
     </section>
+
+    <section id="teaching">
+    <details>
+        <summary><h2>Teaching Experience</h2></summary>
+        <ul>
+            <li>
+                <div class="teaching-heading">
+                    <a href="https://www.math.uzh.ch/course/mat584/fs23" class="item-title" target="_blank" rel="noopener">Classification of Complex Simple Lie Algebras</a>
+                    <span class="date-loc">02/2023 - 05/2023</span>
+                </div>
+                <div>Instructor of student seminar</div>
+                <div>3rd year Bachelor in Math &amp; Master in Math, Universität Zürich</div>
+            </li>
+            <li>
+                <div class="teaching-heading">
+                    <a href="https://www.math.uzh.ch/en/ve-vo-det?key2=4700&amp;semId=45" class="item-title" target="_blank" rel="noopener">Foundations of Mathematics</a>
+                    <span class="date-loc">09/2022 - 12/2022</span>
+                </div>
+                <div>Lecturer</div>
+                <div>1st year Bachelor in Math, Universität Zürich</div>
+            </li>
+            <li>
+                <div class="teaching-heading">
+                    <span class="item-title">Linear Algebra 2</span>
+                    <span class="date-loc">05/2022 - 06/2022</span>
+                </div>
+                <div>Teaching Assistant</div>
+                <div>1st year Bachelor in Math &amp; Physics, Universität Zürich</div>
+            </li>
+            <li>
+                <div class="teaching-heading">
+                    <span class="item-title">Signal and System Theory 1</span>
+                    <span class="date-loc">09/2019 - 12/2019</span>
+                </div>
+                <div>Teaching Assistant</div>
+                <div>2nd year Bachelor in EEIT, ETH Zürich</div>
+            </li>
+            <li>
+                <div class="teaching-heading">
+                    <span class="item-title">Engineering Mechanics</span>
+                    <span class="date-loc">09/2018 - 12/2018</span>
+                </div>
+                <div>Teaching Assistant</div>
+                <div>1st year Bachelor in EEIT, ETH Zürich</div>
+            </li>
+        </ul>
+    </details>
+</section>
+
+    <script>
+        function expandHashSection() {
+            const section = document.getElementById(window.location.hash.slice(1));
+            const details = section?.querySelector('details');
+            if (details) details.open = true;
+        }
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                const section = document.getElementById(link.getAttribute('href').slice(1));
+                section.querySelector('details').open = true;
+            });
+        });
+        window.addEventListener('hashchange', expandHashSection);
+        expandHashSection();
+    </script>
 
 </body>
 </html>
